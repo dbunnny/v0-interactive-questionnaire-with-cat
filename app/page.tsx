@@ -624,59 +624,73 @@ function NavButtons({
 function CatMascot() {
   return (
     <svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* Construction Hard Hat */}
-      <path d="M30 42 L30 38 Q30 22 75 18 Q120 22 120 38 L120 42 Z" fill="#F59E0B" />
-      <rect x="25" y="40" width="100" height="8" rx="2" fill="#D97706" />
-      <rect x="28" y="42" width="94" height="4" fill="#FBBF24" />
+      {/* Cat Body - soft round shape */}
+      <ellipse cx="75" cy="108" rx="35" ry="32" fill="#FCD34D" />
       
-      {/* Cat Body */}
-      <ellipse cx="75" cy="95" rx="40" ry="45" fill="#FCD34D" />
+      {/* Cat Head - large for cute anime proportions */}
+      <circle cx="75" cy="58" r="40" fill="#FCD34D" />
       
-      {/* Cat Head */}
-      <circle cx="75" cy="65" r="35" fill="#FCD34D" />
+      {/* Ears - pointy and perky */}
+      <path d="M40 38 L28 8 L52 28 Z" fill="#FCD34D" />
+      <path d="M110 38 L122 8 L98 28 Z" fill="#FCD34D" />
+      {/* Inner ears - pink */}
+      <path d="M42 35 L34 15 L50 30 Z" fill="#FBBF24" />
+      <path d="M108 35 L116 15 L100 30 Z" fill="#FBBF24" />
       
-      {/* Ears */}
-      <path d="M45 45 L35 20 L55 35 Z" fill="#FCD34D" />
-      <path d="M105 45 L115 20 L95 35 Z" fill="#FCD34D" />
-      <path d="M47 42 L40 25 L53 36 Z" fill="#FBBF24" />
-      <path d="M103 42 L110 25 L97 36 Z" fill="#FBBF24" />
+      {/* Big anime eyes - white base */}
+      <ellipse cx="55" cy="55" rx="14" ry="16" fill="white" />
+      <ellipse cx="95" cy="55" rx="14" ry="16" fill="white" />
       
-      {/* Face */}
-      <ellipse cx="60" cy="60" rx="6" ry="8" fill="#1F2937" />
-      <ellipse cx="90" cy="60" rx="6" ry="8" fill="#1F2937" />
-      <ellipse cx="62" cy="58" rx="2" ry="3" fill="white" />
-      <ellipse cx="92" cy="58" rx="2" ry="3" fill="white" />
+      {/* Pupils - large and expressive */}
+      <ellipse cx="57" cy="57" rx="9" ry="11" fill="#2D1B4E" />
+      <ellipse cx="97" cy="57" rx="9" ry="11" fill="#2D1B4E" />
       
-      {/* Nose */}
-      <path d="M75 70 L71 76 L79 76 Z" fill="#F87171" />
+      {/* Eye sparkles - anime style */}
+      <circle cx="61" cy="52" r="4" fill="white" />
+      <circle cx="101" cy="52" r="4" fill="white" />
+      <circle cx="54" cy="60" r="2" fill="white" />
+      <circle cx="94" cy="60" r="2" fill="white" />
       
-      {/* Mouth */}
-      <path d="M75 76 Q65 85 60 80" stroke="#1F2937" strokeWidth="2" fill="none" strokeLinecap="round" />
-      <path d="M75 76 Q85 85 90 80" stroke="#1F2937" strokeWidth="2" fill="none" strokeLinecap="round" />
+      {/* Blush marks - kawaii style */}
+      <ellipse cx="32" cy="68" rx="9" ry="5" fill="#FCA5A5" opacity="0.5" />
+      <ellipse cx="118" cy="68" rx="9" ry="5" fill="#FCA5A5" opacity="0.5" />
       
-      {/* Whiskers */}
-      <line x1="55" y1="72" x2="35" y2="68" stroke="#1F2937" strokeWidth="1.5" />
-      <line x1="55" y1="76" x2="35" y2="78" stroke="#1F2937" strokeWidth="1.5" />
-      <line x1="95" y1="72" x2="115" y2="68" stroke="#1F2937" strokeWidth="1.5" />
-      <line x1="95" y1="76" x2="115" y2="78" stroke="#1F2937" strokeWidth="1.5" />
+      {/* Small pink nose */}
+      <ellipse cx="75" cy="72" rx="5" ry="4" fill="#F87171" />
       
-      {/* Arms */}
-      <ellipse cx="40" cy="100" rx="12" ry="20" fill="#FCD34D" />
-      <ellipse cx="110" cy="100" rx="12" ry="20" fill="#FCD34D" />
+      {/* Cute smile - simple curved line */}
+      <path d="M68 78 Q75 84 82 78" stroke="#1F2937" strokeWidth="2.5" fill="none" strokeLinecap="round" />
       
-      {/* Wrench in paw */}
-      <g transform="translate(95, 75) rotate(25)">
-        {/* Wrench handle */}
-        <rect x="0" y="8" width="45" height="7" rx="2" fill="#4B5563" />
-        {/* Wrench head - open jaw */}
-        <path d="M-5 0 L5 0 L8 8 L8 23 L5 23 L5 15 L-2 15 L-2 23 L-5 23 L-5 8 Z" fill="#4B5563" />
-        {/* Wrench detail lines */}
-        <rect x="5" y="10" width="35" height="1.5" fill="#6B7280" />
+      {/* Whiskers - thin and delicate */}
+      <line x1="48" y1="70" x2="22" y2="65" stroke="#374151" strokeWidth="1.5" strokeLinecap="round" />
+      <line x1="48" y1="76" x2="22" y2="80" stroke="#374151" strokeWidth="1.5" strokeLinecap="round" />
+      <line x1="102" y1="70" x2="128" y2="65" stroke="#374151" strokeWidth="1.5" strokeLinecap="round" />
+      <line x1="102" y1="76" x2="128" y2="80" stroke="#374151" strokeWidth="1.5" strokeLinecap="round" />
+      
+      {/* Arms/Paws - stubby and cute */}
+      <ellipse cx="45" cy="105" rx="12" ry="15" fill="#FCD34D" />
+      <ellipse cx="105" cy="105" rx="12" ry="15" fill="#FCD34D" />
+      
+      {/* Paw details */}
+      <circle cx="42" cy="115" r="3" fill="#FBBF24" />
+      <circle cx="48" cy="115" r="3" fill="#FBBF24" />
+      
+      {/* Wrench held in paw */}
+      <g transform="translate(105, 92) rotate(40)">
+        <rect x="0" y="5" width="35" height="5" rx="2" fill="#6B7280" />
+        <path d="M-3 0 L3 0 L5 5 L5 15 L3 15 L3 10 L-1 10 L-1 15 L-3 15 L-3 5 Z" fill="#6B7280" />
+        <rect x="3" y="7" width="25" height="1" fill="#9CA3AF" />
       </g>
       
-      {/* Feet */}
-      <ellipse cx="55" cy="135" rx="15" ry="8" fill="#FCD34D" />
-      <ellipse cx="95" cy="135" rx="15" ry="8" fill="#FCD34D" />
+      {/* Tail - fluffy curve */}
+      <path d="M108 115 Q135 105 130 80 Q128 65 138 58" stroke="#FCD34D" strokeWidth="14" fill="none" strokeLinecap="round" />
+      
+      {/* Feet - small beans */}
+      <ellipse cx="58" cy="138" rx="12" ry="6" fill="#FCD34D" />
+      <ellipse cx="92" cy="138" rx="12" ry="6" fill="#FCD34D" />
+    </svg>
+  )
+}
     </svg>
   )
 }
