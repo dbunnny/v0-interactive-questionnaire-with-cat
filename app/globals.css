@@ -130,12 +130,12 @@
 }
 
 /* Custom animations */
-@keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
+@keyframes spin-horizontal {
+  0% {
+    transform: perspective(400px) rotateY(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: perspective(400px) rotateY(360deg);
   }
 }
 
@@ -151,7 +151,8 @@
 }
 
 .animate-spin-slow {
-  animation: spin-slow 3s linear infinite;
+  animation: spin-horizontal 2.5s ease-in-out infinite;
+  transform-style: preserve-3d;
 }
 
 .animate-fadeIn {

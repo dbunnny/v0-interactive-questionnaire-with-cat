@@ -624,10 +624,10 @@ function NavButtons({
 function CatMascot() {
   return (
     <svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* Hard Hat */}
-      <ellipse cx="75" cy="35" rx="45" ry="15" fill="#F59E0B" />
-      <path d="M30 35 Q30 20 75 15 Q120 20 120 35" fill="#F59E0B" />
-      <rect x="65" y="10" width="20" height="8" rx="4" fill="#FBBF24" />
+      {/* Construction Hard Hat */}
+      <path d="M30 42 L30 38 Q30 22 75 18 Q120 22 120 38 L120 42 Z" fill="#F59E0B" />
+      <rect x="25" y="40" width="100" height="8" rx="2" fill="#D97706" />
+      <rect x="28" y="42" width="94" height="4" fill="#FBBF24" />
       
       {/* Cat Body */}
       <ellipse cx="75" cy="95" rx="40" ry="45" fill="#FCD34D" />
@@ -664,15 +664,19 @@ function CatMascot() {
       <ellipse cx="40" cy="100" rx="12" ry="20" fill="#FCD34D" />
       <ellipse cx="110" cy="100" rx="12" ry="20" fill="#FCD34D" />
       
-      {/* Spanner/Wrench in paw */}
-      <rect x="100" y="85" width="8" height="35" rx="2" fill="#6B7280" transform="rotate(15 104 100)" />
-      <circle cx="115" cy="80" r="10" fill="#6B7280" />
-      <circle cx="115" cy="80" r="5" fill="#FCD34D" />
-      <circle cx="100" cy="125" r="8" fill="#6B7280" />
-      <circle cx="100" cy="125" r="4" fill="#FCD34D" />
+      {/* Wrench in paw */}
+      <g transform="translate(95, 75) rotate(25)">
+        {/* Wrench handle */}
+        <rect x="0" y="8" width="45" height="7" rx="2" fill="#4B5563" />
+        {/* Wrench head - open jaw */}
+        <path d="M-5 0 L5 0 L8 8 L8 23 L5 23 L5 15 L-2 15 L-2 23 L-5 23 L-5 8 Z" fill="#4B5563" />
+        {/* Wrench detail lines */}
+        <rect x="5" y="10" width="35" height="1.5" fill="#6B7280" />
+      </g>
       
-      {/* Belly */}
-      <ellipse cx="75" cy="105" rx="25" ry="30" fill="#FEF3C7" />
+      {/* Feet */}
+      <ellipse cx="55" cy="135" rx="15" ry="8" fill="#FCD34D" />
+      <ellipse cx="95" cy="135" rx="15" ry="8" fill="#FCD34D" />
     </svg>
   )
 }
