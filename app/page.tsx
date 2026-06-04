@@ -120,9 +120,32 @@ export default function RepairQuestionnaire() {
 
   const copyToClipboard = () => {
     const summary = generateSummary()
-    navigator.clipboard.writeText(summary)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
+    
+    // Fallback for environments where Clipboard API is blocked
+    const textArea = document.createElement('textarea')
+    textArea.value = summary
+    textArea.style.position = 'fixed'
+    textArea.style.left = '-9999px'
+    textArea.style.top = '0'
+    document.body.appendChild(textArea)
+    textArea.focus()
+    textArea.select()
+    
+    try {
+      document.execCommand('copy')
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch (err) {
+      // If execCommand fails, try the modern API as fallback
+      navigator.clipboard.writeText(summary).then(() => {
+        setCopied(true)
+        setTimeout(() => setCopied(false), 2000)
+      }).catch(() => {
+        alert('Could not copy text. Please select and copy manually.')
+      })
+    } finally {
+      document.body.removeChild(textArea)
+    }
   }
 
   const renderQuestion = () => {
