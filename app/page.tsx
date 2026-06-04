@@ -691,6 +691,3 @@ function CatMascot() {
     </svg>
   )
 }
-    </svg>
-  )
-}
