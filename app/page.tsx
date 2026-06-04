@@ -73,7 +73,12 @@ export default function RepairQuestionnaire() {
 
   const handleNext = () => {
     if (step < totalQuestions) {
-      setStep(step + 1)
+      // If unpowered is selected at step 0, skip the power-related questions (1, 2, 3)
+      if (step === 0 && formData.powerType === "unpowered") {
+        setStep(4) // Skip to make/model question
+      } else {
+        setStep(step + 1)
+      }
     }
   }
 
@@ -173,25 +178,21 @@ export default function RepairQuestionnaire() {
         )
       
       case 1:
-        if (formData.powerType === "powered") {
-          return (
-            <QuestionCard title="Does the item turn on at all?">
-              <p className="text-muted-foreground mb-6">Do any lights, fans, or displays react when you power it on?</p>
-              <RadioGroup
-                value={formData.turnsOn}
-                onChange={(val) => setFormData({ ...formData, turnsOn: val as YesNo })}
-                options={[
-                  { value: "yes", label: "Yes, something happens" },
-                  { value: "no", label: "No, completely dead" },
-                ]}
-              />
-              <NavButtons onBack={handleBack} onNext={handleNext} canProgress={formData.turnsOn !== null} />
-            </QuestionCard>
-          )
-        } else {
-          setStep(4)
-          return null
-        }
+        // This case only shows for powered items
+        return (
+          <QuestionCard title="Does the item turn on at all?">
+            <p className="text-muted-foreground mb-6">Do any lights, fans, or displays react when you power it on?</p>
+            <RadioGroup
+              value={formData.turnsOn}
+              onChange={(val) => setFormData({ ...formData, turnsOn: val as YesNo })}
+              options={[
+                { value: "yes", label: "Yes, something happens" },
+                { value: "no", label: "No, completely dead" },
+              ]}
+            />
+            <NavButtons onBack={handleBack} onNext={handleNext} canProgress={formData.turnsOn !== null} />
+          </QuestionCard>
+        )
       
       case 2:
         return (
