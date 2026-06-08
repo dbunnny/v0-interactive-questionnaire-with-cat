@@ -435,6 +435,32 @@ export default function RepairQuestionnaire() {
             </div>
           </div>
 
+{/* Support the Developer */}
+<div className="bg-card border-2 border-border rounded-xl p-6 mb-6 shadow-lg">
+  <div className="flex flex-col sm:flex-row items-center gap-5">
+    <div className="flex-shrink-0">
+      <PoundCoinMascot />
+    </div>
+    <div className="flex-1 text-center sm:text-left">
+      <h3 className="text-xl font-bold text-foreground mb-2" style={{ fontFamily: "var(--font-heading)" }}>
+        Enjoyed the app?
+      </h3>
+      <p className="text-muted-foreground mb-4">
+        This little tool was made with love for the HinckleyFixers community. If it helped you out, you can leave a small tip to say thanks 💛
+      </p>
+      
+        href="https://revolut.me/lupila"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-5 py-2.5 rounded-lg font-semibold transition-opacity"
+      >
+        <Heart className="w-4 h-4" />
+        Support the developer
+      </a>
+    </div>
+  </div>
+</div>
+          
           {/* Start Over */}
           <div className="text-center">
             <button
