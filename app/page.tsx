@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Check, Copy, Wrench } from "lucide-react"
+import { Check, Copy, Wrench, Heart } from "lucide-react"
 
 // Custom social icons since they may not exist in all lucide versions
 function FacebookIcon({ className }: { className?: string }) {
@@ -688,6 +689,41 @@ function CatMascot() {
       {/* Feet - small beans */}
       <ellipse cx="58" cy="138" rx="12" ry="6" fill="#FCD34D" />
       <ellipse cx="92" cy="138" rx="12" ry="6" fill="#FCD34D" />
+
+      
     </svg>
+  )
+}
+function PoundCoinMascot() {
+  return (
+    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Coin edge for depth */}
+      <circle cx="50" cy="50" r="46" fill="#B45309" />
+      <circle cx="50" cy="50" r="44" fill="#D97706" />
+      {/* Coin face */}
+      <circle cx="50" cy="50" r="40" fill="#FCD34D" />
+      {/* Inner decorative ring */}
+      <circle cx="50" cy="50" r="36" fill="none" stroke="#FBBF24" strokeWidth="1.5" />
+      {/* Big £ symbol behind face */}
+      <text x="50" y="62" textAnchor="middle" fontSize="36" fontWeight="bold" fill="#92400E" opacity="0.25" fontFamily="Georgia, serif">£</text>
+      {/* Anime eyes - white */}
+      <ellipse cx="38" cy="44" rx="6" ry="8" fill="white" />
+      <ellipse cx="62" cy="44" rx="6" ry="8" fill="white" />
+      {/* Pupils */}
+      <ellipse cx="39" cy="45" rx="4" ry="5.5" fill="#2D1B4E" />
+      <ellipse cx="63" cy="45" rx="4" ry="5.5" fill="#2D1B4E" />
+      {/* Eye sparkles */}
+      <circle cx="41" cy="42" r="1.8" fill="white" />
+      <circle cx="65" cy="42" r="1.8" fill="white" />
+      {/* Blush */}
+      <ellipse cx="26" cy="54" rx="4" ry="2.5" fill="#FCA5A5" opacity="0.6" />
+      <ellipse cx="74" cy="54" rx="4" ry="2.5" fill="#FCA5A5" opacity="0.6" />
+      {/* Smile */}
+      <path d="M44 60 Q50 66 56 60" stroke="#1F2937" strokeWidth="2.2" fill="none" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+</svg>
   )
 }
