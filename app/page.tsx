@@ -745,6 +745,4 @@ function PoundCoinMascot() {
   )
 }
 
-</svg>
-  )
-}
+
