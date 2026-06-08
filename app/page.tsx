@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
-import { Check, Copy, Wrench } from "lucide-react"
 import { Check, Copy, Wrench, Heart } from "lucide-react"
 
 // Custom social icons since they may not exist in all lucide versions
