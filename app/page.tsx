@@ -448,10 +448,10 @@ export default function RepairQuestionnaire() {
         This little tool was made with love for the HinckleyFixers community. If it helped you out, you can leave a small tip to say thanks 💛
       </p>
       
-        <a href="https://revolut.me/lupila" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-5 py-2.5 rounded-lg font-semibold transition-opacity">
+     <a href="https://revolut.me/lupila" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-5 py-2.5 rounded-lg font-semibold transition-opacity">
   <Heart className="w-4 h-4" />
   Support the developer
-</a>
+    </a>
     </div>
   </div>
 </div>
